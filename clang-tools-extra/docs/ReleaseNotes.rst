@@ -67,12 +67,6 @@ The improvements are...
 Improvements to clang-tidy
 --------------------------
 
-- New :doc:`bugprone-bad-signal-to-kill-thread
-  <clang-tidy/checks/bugprone-bad-signal-to-kill-thread>` check.
-
-  Finds ``pthread_kill`` function calls when a thread is terminated by 
-  raising ``SIGTERM`` signal.
-
 - New :doc:`bugprone-dynamic-static-initializers
   <clang-tidy/checks/bugprone-dynamic-static-initializers>` check.
 
@@ -93,11 +87,6 @@ Improvements to clang-tidy
   length of this expression, because the null terminator needs an extra space.
   Without the null terminator it can result in undefined behaviour when the
   string is read.
-
-- New alias :doc:`cert-pos44-c
-  <clang-tidy/checks/cert-pos44-c>` to
-  :doc:`bugprone-bad-signal-to-kill-thread
-  <clang-tidy/checks/bugprone-bad-signal-to-kill-thread>` was added.
 
 - New :doc:`cppcoreguidelines-init-variables
   <clang-tidy/checks/cppcoreguidelines-init-variables>` check.
@@ -151,6 +140,11 @@ Improvements to clang-tidy
 
 - The 'objc-avoid-spinlock' check was renamed to :doc:`darwin-avoid-spinlock
   <clang-tidy/checks/darwin-avoid-spinlock>`
+
+- New :doc:`pti-function-name-format
+  <clang-tidy/checks/pti-function-name-format>` check.
+
+  Checks for PTI function name conformance.
 
 - New :doc:`readability-redundant-access-specifiers
   <clang-tidy/checks/readability-redundant-access-specifiers>` check.

@@ -103,6 +103,11 @@ extern volatile int PortabilityModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED PortabilityModuleAnchorDestination =
     PortabilityModuleAnchorSource;
 
+// This anchor is used to force the linker to link the PTIModule.
+extern volatile int PTIModuleAnchorSource;
+static int LLVM_ATTRIBUTE_UNUSED PTIModuleAnchorDestination =
+    PTIModuleAnchorSource;    
+
 // This anchor is used to force the linker to link the ReadabilityModule.
 extern volatile int ReadabilityModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED ReadabilityModuleAnchorDestination =
